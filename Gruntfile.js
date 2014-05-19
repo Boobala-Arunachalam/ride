@@ -38,7 +38,6 @@ module.exports = function(grunt) {
 												'copy:appTmp',
 												'copy:vendorTmp',
 												'transpile:ride',
-									      'emblem:compile',
 												'emberTemplates:dist',
 											 	'concat:ride',
 											 	'concat:vendor',
