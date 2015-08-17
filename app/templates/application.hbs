@@ -1,6 +1,48 @@
-<h3>This is First Page</h3>
-<ul>
-{{#each item in content}}
-  <li>{{item}}</li>
-{{/each}}
-</ul>
+<div class="top-band text-center">
+  <h3>Create your own color full theme</h3>
+</div>
+<div class="form-content">
+  <form class="form-horizontal">
+    <h4>Themes Settings:</h4>
+    <div class="form-group">
+      <label class="control-label col-md-3">Color</label>
+      <div class="col-md-9">
+        {{input value=color classNames="form-control" placeholder="Select Color for your theme"}}
+      </div>
+    </div>
+    <div class="form-group">
+      <label class="control-label col-md-3">Font</label>
+      <div class="col-md-9">
+        {{view Em.Select content=fontFamilies optionValuePath='content.name' optionLabelPath='content.name' optionGroupPath='group' value=font classNames="form-control" prompt="Select Font for your theme"}}
+      </div>
+    </div>
+
+    <h4>Content Settings:</h4>
+    <div class="form-group">
+      <label class="control-label col-md-3">Header</label>
+      <div class="col-md-9">
+        {{input classNames="form-control" value=header placeholder="Your header is"}}
+      </div>
+    </div>
+    <div class="form-group">
+      <label class="control-label col-md-3">Motto</label>
+      <div class="col-md-9">
+        {{input classNames="form-control" value=motto placeholder="Your vision motto.."}}
+      </div>
+    </div>
+    <div class="form-group">
+      <label class="control-label col-md-3">Footer</label>
+      <div class="col-md-9">
+        {{input classNames="form-control" value=footer placeholder="Enclose your footer as"}}
+      </div>
+    </div>
+    <div class="form-actions">
+      <button type="button" class="btn btn-default" {{action "previewTheme"}}>Preview</button>
+      <button type="button" class="btn btn-primary" {{action "saveandDownload"}}>Save & Download</button>
+      <button type="button" class="btn btn-default" {{action "reset"}}>Reset</button>
+    </div>
+  </form>
+</div>
+<div class="preview-content">
+  {{partial "template-preview"}}
+</div>

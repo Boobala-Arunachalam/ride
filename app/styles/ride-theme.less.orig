@@ -1,0 +1,96 @@
+/*
+* Template Theme related less
+*/
+
+//Variables for themes
+@circle_size: 15px;
+
+@media (max-width : 1280px) {
+	height: 800px;
+	width: 1500px;
+}
+
+.page {
+ height: 100%;
+ width: 100%;
+ position: relative;
+ top: 0;
+ left: 0;
+}
+.page-header {
+ position: absolute;
+ height: 75px;
+ width: 100%;
+}
+
+/*
+* Circles in Header Area
+*/
+.circles {
+  float: right;
+  margin-top: 15px;
+  white-space: nowrap;
+  .circle {
+    float: left;
+    margin-left: 10px;
+    display: inline-block;
+    vertical-align: middle;
+    &.circle-lg {
+      background-color: #F0FFFF;
+      height: @circle_size + 5px;
+      width: @circle_size + 5px;
+      border-radius: @circle_size + 5px;
+    }
+    &.circle-mm {
+      background-color: #e6ffff;
+      height: @circle_size;
+      width: @circle_size;
+      border-radius: @circle_size;
+    }
+    &.circle-sm {
+      background-color: #ADDFFF;
+      height: @circle_size - 5px;
+      width: @circle_size - 5px;
+      border-radius: @circle_size - 5px;
+    }
+  }
+}
+.theme-header {
+   float: right;
+   font-size: 28px;
+   line-height: 55px;
+   font-family: Papyrus;
+}
+
+.page-body {
+   background-color: #F0FFFF;
+   height: 50%;
+   width: 115%;
+   position: relative;
+   transform: rotate(-2deg);
+   left: -10px;
+   top: 105px;
+}
+.triangle-lg {
+	top: 0px;
+	right: 0px;
+	height: 0px;
+	border-top-width: 400px;
+	border-top-style: solid;
+	border-top-color: #ADDFFF;
+	border-left-width: 800px;
+	border-left-style: solid;
+	border-left-color: transparent; 
+}
+.triangle-sm {
+   position: absolute;
+   top: 150px;
+   left: -5px;
+   border-top-width: 150px;
+   border-top-style: solid;
+   border-top-color: transparent;
+   border-left-width: 740px;
+   border-left-style: solid;
+   border-left-color: #e6ffff; 
+   transform: rotate(9deg)
+}
