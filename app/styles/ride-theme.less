@@ -1,0 +1,98 @@
+/*
+* Template Theme related less
+*/
+
+//Variables for themes
+@circle_size: 15px;
+@theme-dark: #ADDFFF; 
+@theme-light: #F0FFFF;
+@theme-font: Papyrus;
+
+
+@media (max-width : 1280px) {
+	height: 800px;
+	width: 1500px;
+}
+
+.page {
+ height: 100%;
+ width: 100%;
+ position: relative;
+ top: 0;
+ left: 0;
+ font-family: @theme-font;
+}
+.preview-header {
+ top: 0;
+ height: 15%;
+ width: 100%;
+ position: absolute;
+}
+
+/*
+* Circles in Header Area
+*/
+.circles {
+  float: right;
+  margin-top: 15px;
+  white-space: nowrap;
+  .circle {
+    float: left;
+    margin-left: 10px;
+    display: inline-block;
+    vertical-align: middle;
+    &.circle-lg {
+      background-color: #F0FFFF;
+      height: @circle_size + 5px;
+      width: @circle_size + 5px;
+      border-radius: @circle_size + 5px;
+    }
+    &.circle-mm {
+      background-color: #e6ffff;
+      height: @circle_size;
+      width: @circle_size;
+      border-radius: @circle_size;
+    }
+    &.circle-sm {
+      background-color: @theme-dark;
+      height: @circle_size - 5px;
+      width: @circle_size - 5px;
+      border-radius: @circle_size - 5px;
+    }
+  }
+}
+.theme-header {
+   float: right;
+   font-size: 28px;
+   line-height: 55px;
+}
+
+.page-body {
+  position: absolute;
+  top: 15%;
+  left: 0;
+  width: 115%;
+  height: 70%;
+  background: -moz-linear-gradient(32deg, @theme-light 0%, @theme-light 47%, @theme-dark 64%, @theme-dark 100%);
+  background: -webkit-gradient(left bottom, right top, color-stop(0%, rgba(183,222,237,1)), color-stop(42%, rgba(113,206,239,1)), color-stop(55%, rgba(33,180,226,1)), color-stop(100%, rgba(183,222,237,1)));
+  background: -webkit-linear-gradient(32deg, @theme-light 0%, @theme-light 47%, @theme-dark 64%, @theme-dark 100%);
+  background: -o-linear-gradient(32deg, @theme-light 0%, @theme-light 47%, @theme-dark 64%, @theme-dark 100%);
+  background: -ms-linear-gradient(32deg, @theme-light 0%, @theme-light 47%, @theme-dark 64%, @theme-dark 100%);
+  background: linear-gradient(32deg, @theme-light 0%, @theme-light 47%, @theme-dark 64%, @theme-dark 100%);
+  filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#b7deed', endColorstr='#b7deed', GradientType=1 );
+  
+  .motto {
+    position: absolute;
+    top: 65%;
+    left: 10%;
+  }
+}
+
+.page-footer {
+  position: absolute;
+  bottom: 0;
+  height: 15%;
+  top: 85%;
+  font-size: 15px;
+  padding: 20px;
+}

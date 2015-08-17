@@ -1,10 +1,14 @@
 module.exports = {
 	ride: {
 		src: ["tmp/transpiled/**/*.js"],
-		dest: "tmp/result/assets/ride.js",
+		dest: "tmp/result/assets/js/ride.js",
 		options: {
 			sourcesContent: true
 		},
+	},
+  rideCSS: {
+		src: ["tmp/styles/app/*.css"],
+		dest: "tmp/result/assets/css/ride.css",
 	},
 	
 	vendor: {
@@ -16,6 +20,6 @@ module.exports = {
 			"tmp/javascripts/vendor/loader.js",
 			"tmp/javascripts/vendor/resolver.js"
 		],
-		dest: "tmp/result/assets/vendor.js"
+		dest: "tmp/result/assets/js/vendor.js"
 	}
 };

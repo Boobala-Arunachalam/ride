@@ -8,9 +8,15 @@ module.exports = {
 				src: '**',
 				dest: './tmp/dist/css/'
 			},
+      {
+				expand: true,
+				cwd: './tmp/result/assets/css',
+				src: '**',
+				dest: './tmp/dist/css/'
+			},
 			{
 				expand: true,
-				cwd: './tmp/result/assets',
+				cwd: './tmp/result/assets/js',
 				src: '**',
 				dest: './tmp/dist/js/'
 			},
@@ -49,7 +55,7 @@ module.exports = {
 				cwd: './',
 				src: 'index.html',
 				dest: 'tmp/'
-			},
+			}
 		]
 	},
 	
@@ -61,13 +67,7 @@ module.exports = {
 				cwd: 'app/vendor/javascripts',
 				src: '*.js',
 				dest: 'tmp/javascripts/vendor/'
-			},
-			{
-				expand: true,
-				cwd: 'app/vendor/css',
-				src: '*.css',
-				dest: 'tmp/styles/vendor'
-			},
+			}
 		]
 	},
 	
@@ -105,9 +105,9 @@ module.exports = {
 			},
 			{
 				expand: true,
-				cwd: 'bower_components/bootstrap/dist/css/',
-				src: 'bootstrap.css',
-				dest: 'app/vendor/javascripts'
+				cwd: 'bower_components/bootstrap/less/',
+				src: '*.less',
+				dest: 'app/styles'
 			},
 		]
 	}
